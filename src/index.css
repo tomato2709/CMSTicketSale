@@ -1,10 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #E5E5E5;
+  --darkBrown: #1E0D03;
+  --yellow: #FFB800;
+  --orange: #FF993C;
+  --blue: #4F75FF;
+  --darkOrange: #FF8A48;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f9f6f4;
+}
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat Thin', sans-serif;
 }
 
 code {
