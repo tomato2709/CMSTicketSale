@@ -1,4 +1,9 @@
 .App {
+  display: flex;
+  position: relative;
+  background-color: var(--white);
+  color: var(--darkBrown);
+  height: 100vh;
   text-align: center;
 }
 

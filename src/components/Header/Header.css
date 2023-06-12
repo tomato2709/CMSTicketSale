@@ -1,0 +1,35 @@
+.header {
+    background-color: transparent;
+    height: 100%;
+    padding: 17px 32px 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .input {
+    background-color: #ede6e6;
+    border: none;
+    border-radius: 8px;
+}
+.header .input input {
+    background-color: #ede6e6;
+}
+.header .profile-area {
+    display: flex;
+    align-items: center;
+}
+.header .profile-area .notifitication-icon {
+    color: #1e0d03;
+    background-color: transparent;
+    margin-right: 24px;
+    font-size: 18px;
+}
+.header .profile-area .info-container {
+    display: flex;
+    align-items: center;
+}
+.header .profile-area .info-container .avatar {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px 0 24px;
+}

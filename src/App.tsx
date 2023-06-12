@@ -1,25 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ConfigProvider } from 'antd';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import Home from './pages/Home/Home';
+import ManageTicket from './pages/ManageTicket/ManageTicket';
+import TicketControl from './pages/TicketControl/TicketControl';
+import ServicePackage from './pages/Settings/ServicePackage/ServicePackage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider 
+      theme={{
+        token: {
+          fontFamily: 'Montserrat Thin',
+          colorPrimary: '#FFB800',
+        },
+        components: {
+          Menu: {
+            itemColor: '#1E0D03',
+            itemActiveBg: '#FFB800',
+            fontSize: 18,
+            lineHeight: 56,
+            margin: 0,
+            colorBgBase: '#F9F6F4',
+          }
+        }
+      }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index path="home" element={<Home />} />
+            <Route path="manage-ticket" element={<ManageTicket />} />
+            <Route path="ticket-control" element={<TicketControl />} />
+            <Route path="settings/service-pack" element={<ServicePackage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ConfigProvider>
   );
 }
 
