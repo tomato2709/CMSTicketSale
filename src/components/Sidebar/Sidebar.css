@@ -25,6 +25,7 @@
 
 .sidebar .menu .ant-menu-root {
     border-right: none !important;
+    background: #f9f6f4;
 }
 .sidebar .menu .ant-menu-inline > .ant-menu-item {
     height: 48px;
@@ -65,4 +66,8 @@
 .sidebar .menu .ant-menu-submenu-expand-icon,
 .sidebar .menu .ant-menu-submenu-arrow {
     color: inherit;
+}
+
+.sidebar .menu :where(.css-dev-only-do-not-override-1ritjee).ant-menu-light .ant-menu-item-selected {
+    background-color: #ffb800;
 }

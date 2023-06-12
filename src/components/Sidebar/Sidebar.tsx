@@ -46,8 +46,8 @@ const Sidebar : React.FC = () => {
             <CreditCardOutlined />
         ),
         getItem(
-            "/change-ticket",
-            <Link to="/ticket-control">Đổi soát vé</Link>,
+            "/ticket-control",
+            <Link to="/ticket-control">Đối soát vé</Link>,
             <ContainerOutlined />
         ),
         getItem(

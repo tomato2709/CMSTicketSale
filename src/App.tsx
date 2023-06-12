@@ -9,7 +9,23 @@ import ServicePackage from './pages/Settings/ServicePackage/ServicePackage';
 
 function App() {
   return (
-    <ConfigProvider theme={{token: {fontFamily: 'Montserrat Thin',},}}>
+    <ConfigProvider 
+      theme={{
+        token: {
+          fontFamily: 'Montserrat Thin',
+          colorPrimary: '#FFB800',
+        },
+        components: {
+          Menu: {
+            itemColor: '#1E0D03',
+            itemActiveBg: '#FFB800',
+            fontSize: 18,
+            lineHeight: 56,
+            margin: 0,
+            colorBgBase: '#F9F6F4',
+          }
+        }
+      }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
