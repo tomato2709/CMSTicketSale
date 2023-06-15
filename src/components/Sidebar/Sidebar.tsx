@@ -73,6 +73,9 @@ const Sidebar : React.FC = () => {
                 <div className="menu">
                     <Menu selectedKeys={[key]} items={items} mode={'inline'}/>
                 </div>
+                <div className="copyright" style={{ position: "absolute", fontSize: "12px", opacity: "50%", bottom: "17px", left: "17px" }}>
+                    Copyright © 2020 Alta Software
+                </div>
             </div>
         </div>
     );
