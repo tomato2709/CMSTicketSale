@@ -1,0 +1,37 @@
+.modal {
+    color: #1e0d03;
+}
+.modal .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.modal .label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+}
+.modal .checkItem {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.modal .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+}
+.modal .buttonContainer .btn {
+    height: 48px;
+    width: 160px;
+}
+.modal .buttonContainer .btn + .btn {
+    margin-left: 24px;
+}
+.modal .checkAll {
+    position: absolute;
+    z-index: 10;
+}
