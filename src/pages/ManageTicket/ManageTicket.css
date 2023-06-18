@@ -1,0 +1,45 @@
+.manageTicket {
+    margin: 0 32px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+    height: 95%;
+}
+.manageTicket .title {
+    font-size: 34px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #1e0d03;
+    margin-bottom: 32px;
+}
+.manageTicket .input {
+    height: 48px;
+    width: 446px;
+    background-color: #f7f7f8;
+    border: none;
+    border-radius: 8px;
+}
+.manageTicket .input input {
+    background-color: #f7f7f8;
+}
+.manageTicket .btn {
+    height: 48px;
+}
+.manageTicket .table {
+    margin-top: 24px;
+}
+.manageTicket .table .link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #ff993c;
+}
+.popOverContainer {
+    padding: 15px;
+}
+.popOverContainer .popOverText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+}

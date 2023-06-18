@@ -16,6 +16,9 @@ function App() {
           colorPrimary: '#FFB800',
         },
         components: {
+          Button: {
+            colorBgContainer: '#ff993c'
+          },
           Menu: {
             itemColor: '#1E0D03',
             itemActiveBg: '#FFB800',
@@ -23,8 +26,8 @@ function App() {
             lineHeight: 56,
             margin: 0,
             colorBgBase: '#F9F6F4',
-          }
-        }
+          },
+        },
       }}>
       <BrowserRouter>
         <Routes>

@@ -6,7 +6,7 @@ import { Calendar, DayRange, DayValue } from "@hassanmojab/react-modern-calendar
 import { DatePicker, Popover, Radio, RadioChangeEvent } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 
-type DatePickerCustomType = {
+type CustomDatePickerType = {
     value?: any;
     onChange?: (value: DayValue) => void;
     textLabel?: string;
@@ -18,7 +18,7 @@ type DatePickerCustomType = {
     inputClassName?: string;
 };
 
-const DatePickerCustom: React.FC<DatePickerCustomType> = (props) => {
+const CustomDatePicker: React.FC<CustomDatePickerType> = (props) => {
     const { hasOption = true } = props;
     const [ value, setValue ] = useState(props.value);
     const [ radioValue, setRadioValue ] = useState(true);
@@ -107,4 +107,4 @@ const DatePickerCustom: React.FC<DatePickerCustomType> = (props) => {
     );
 };
 
-export default DatePickerCustom;
+export default CustomDatePicker;

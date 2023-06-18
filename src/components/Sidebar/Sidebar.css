@@ -39,7 +39,12 @@
     display: flex;
     align-items: center;
 }
-.sidebar .menu .ant-menu-item-selected,
+.sidebar .menu .ant-menu-item-selected {
+    background-color: #FFB800;
+}
+.sidebar .menu .ant-menu-item-selected svg {
+    color: #ffffff !important;
+}
 .sidebar .menu .ant-menu-item-selected a {
     color: #ffffff !important;
 }
