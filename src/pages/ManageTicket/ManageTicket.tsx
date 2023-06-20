@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import './ManageTicket.css'
-import ModalFilter from "../../components/Modal/ModalFilter";
 import { ReactComponent as searchSvg } from "../../assets/search.svg";
+import ModalFilter from "../../components/Modal/ModalFilter";
 import StatusTag from "../../components/StatusTag/StatusTag";
 import { Button, Col, Input, Popover, Row, Space, Table, Typography } from "antd";
 import Icon, { FilterOutlined, MoreOutlined } from "@ant-design/icons";
 import moment, { Moment } from "moment";
 import { useAppSelector, useAppDispatch } from "../../redux/store";
 import { ticketSelector, getAll, ticketType } from "../../redux/slice/ticketSlice";
+import { useSearch } from "../../hooks/useSearch";
 
 const columns = [
     {
@@ -69,10 +70,22 @@ const ManageTicket = () => {
     const [ showModalFilter, setShowModalFilter ] = useState<boolean>(false);
     const [ showModalChange, setShowModalChange ] = useState<boolean>(false);
     const [ data, setData ] = useState<ticketType | null>(null);
+    const ticketStore = useAppSelector(state => state.ticketReducer.tickets)
+    const [ ticket, setTicket ] = useState(ticketStore)
+    const [ search, setSearch ] = useSearch(ticketStore, 'number')
+
+    useEffect(() => {
+        setTicket(search)
+    }, [search])
 
     useEffect(() => {
         dispatch(getAll());
     }, []);
+
+    const handleSearch = (e: any) => {
+        const value = e.value;
+        setSearch(value);
+    }
 
     return (
         <div className="manageTicket">
@@ -98,6 +111,7 @@ const ManageTicket = () => {
                             }
                             className="input"
                             placeholder={"Tìm bằng số vé"}
+                            onChange={handleSearch}
                         />
                     </Typography.Text>
                 </Col>
@@ -193,7 +207,6 @@ const ManageTicket = () => {
                 showModal={showModalFilter}
                 setShowModal={setShowModalFilter}
             />
-
         </div>
     );
 };

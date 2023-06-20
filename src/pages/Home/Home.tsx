@@ -1,35 +1,24 @@
 import React from "react";
 import './Home.css'
+import CustomChart from "../../components/Chart/Chart";
 import { Col, DatePicker, Row, Space, Typography } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 import Chart from "react-apexcharts";
-import CustomChart from "../../components/Chart/Chart";
 
 const Home : React.FC = () => {
     const options: ApexCharts.ApexOptions = {
         chart: {
             width: 100,
-            toolbar: {
-                show: false,
-            },
-
-            zoom: {
-                enabled: false,
-            },
-
+            toolbar: {show: false},
+            zoom: {enabled: false},
             events: {
                 mounted: (chart) => {
                     chart.windowResizeHandler();
                 },
             },
         },
-
         colors: ["#FF993C"],
-
-        dataLabels: {
-            enabled: false,
-        },
-
+        dataLabels: {enabled: false},
         xaxis: {
             categories: [
                 "Thứ 2",
@@ -41,7 +30,6 @@ const Home : React.FC = () => {
                 "CN",
             ],
         },
-
         yaxis: {
             labels: {
                 formatter: (value) => {
@@ -51,17 +39,11 @@ const Home : React.FC = () => {
                             valueString.slice(0, valueString.length - 6) + "tr"
                         );
                     }
-
                     return valueString;
                 },
             },
         },
-
-        responsive: [
-            {
-                breakpoint: 1000,
-            },
-        ],
+        responsive: [{breakpoint: 1000}],
     };
     return (
         <div className="home">
