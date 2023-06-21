@@ -23,8 +23,16 @@ body {
   font-family: 'Montserrat Thin', sans-serif;
 }
 
+/* ignore compiling error frame */
+body > iframe {
+  display: none;
+}
+
 .ant-modal-header {
   border-bottom: none;
+}
+.ant-input:where(.css-dev-only-do-not-override-y5fdin).ant-input:placeholder-shown {
+  font-style: italic;
 }
 
 .ant-popover-inner {
@@ -38,6 +46,26 @@ body {
 
 .ant-popover-inner-content {
   padding: 0;
+}
+
+.ant-table-cell::before {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #E5E5E5; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--yellow); 
+  border-radius: 5px;
 }
 
 code {

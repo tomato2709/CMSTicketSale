@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import './ManageTicket.css'
 import { ReactComponent as searchSvg } from "../../assets/search.svg";
 import ModalFilter from "../../components/Modal/ModalFilter";
+import ModalModify from "../../components/Modal/ModalModify";
 import StatusTag from "../../components/StatusTag/StatusTag";
 import { Button, Col, Input, Popover, Row, Space, Table, Typography } from "antd";
 import Icon, { FilterOutlined, MoreOutlined } from "@ant-design/icons";
@@ -68,7 +69,7 @@ const ManageTicket = () => {
     const dispatch = useAppDispatch();
     const { loading, tickets } = useAppSelector(ticketSelector);
     const [ showModalFilter, setShowModalFilter ] = useState<boolean>(false);
-    const [ showModalChange, setShowModalChange ] = useState<boolean>(false);
+    const [ showModalModify, setShowModalModify ] = useState<boolean>(false);
     const [ data, setData ] = useState<ticketType | null>(null);
     const ticketStore = useAppSelector(state => state.ticketReducer.tickets)
     const [ ticket, setTicket ] = useState(ticketStore)
@@ -177,7 +178,7 @@ const ManageTicket = () => {
                                             <Typography.Text
                                                 className="popOverText"
                                                 onClick={() => {
-                                                    setShowModalChange(true);
+                                                    setShowModalModify(true);
                                                     setData(ticket);
                                                 }}
                                             >
@@ -206,6 +207,11 @@ const ManageTicket = () => {
             <ModalFilter
                 showModal={showModalFilter}
                 setShowModal={setShowModalFilter}
+            />
+            <ModalModify
+                showModal={showModalModify}
+                setShowModal={setShowModalModify}
+                data={data}
             />
         </div>
     );
