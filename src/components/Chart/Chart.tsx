@@ -21,7 +21,6 @@ const CustomChart: React.FC<CustomChartType> = (props) => {
             chart: {
                 type: "donut",
             },
-
             plotOptions: {
                 pie: {
                     size: 250,
@@ -30,33 +29,20 @@ const CustomChart: React.FC<CustomChartType> = (props) => {
                     },
                 },
             },
-
             colors: ["#FF8A48", "#4F75FF"],
             labels: name,
-
             dataLabels: {
-                formatter: function (
-                    val: any,
-                    { seriesIndex, dataPointIndex, w }: any
-                ) {
+                formatter: function (val: any, {seriesIndex, dataPointIndex, w}: any) {
                     return w.config.series[seriesIndex];
                 },
-
                 textAnchor: "end",
-
-                style: {
-                    fontFamily: "Montserrat, sans-serif",
-                    fontWeight: 400,
-                    fontSize: "14px",
-                },
-
+                style: {fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: "14px"},
                 background: {
                     enabled: true,
                     foreColor: "#fff",
                     padding: 20,
                     opacity: 1,
                     border: 20,
-
                     dropShadow: {
                         enabled: true,
                         top: 0,
@@ -66,28 +52,16 @@ const CustomChart: React.FC<CustomChartType> = (props) => {
                         opacity: 0.2,
                     },
                 },
-
                 dropShadow: {
                     enabled: false,
                 },
             },
-
             legend: {
                 show: props.legend,
                 width: 400,
-
-                markers: {
-                    width: 44,
-                    height: 20,
-                    radius: 4,
-                },
-
-                onItemClick: {
-                    toggleDataSeries: false,
-                },
-                onItemHover: {
-                    highlightDataSeries: false,
-                },
+                markers: {width: 44, height: 20, radius: 4},
+                onItemClick: {toggleDataSeries: false},
+                onItemHover: {highlightDataSeries: false},
             },
         },
     };

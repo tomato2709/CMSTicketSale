@@ -1,4 +1,5 @@
 import React from 'react';
+import 'react-modern-calendar-datepicker/lib/DatePicker.css';
 import { ConfigProvider } from 'antd';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';

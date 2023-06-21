@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './DatePicker.css'
-import moment from "dayjs"
+import moment from "moment"
 import { DatePickerConfig } from "./DatePickerConfig";
 import { Calendar, DayRange, DayValue } from "@hassanmojab/react-modern-calendar-datepicker";
 import { DatePicker, Popover, Radio, RadioChangeEvent } from "antd";

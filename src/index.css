@@ -23,6 +23,23 @@ body {
   font-family: 'Montserrat Thin', sans-serif;
 }
 
+.ant-modal-header {
+  border-bottom: none;
+}
+
+.ant-popover-inner {
+  background-color: #ffd2a8;
+  border-radius: 8px;
+}
+
+.ant-popover-arrow-content {
+  --antd-arrow-background-color: #ffd2a8;
+}
+
+.ant-popover-inner-content {
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
