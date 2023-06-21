@@ -48,6 +48,28 @@ body > iframe {
   padding: 0;
 }
 
+.ant-radio-wrapper span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.ant-radio-wrapper {
+    span:not(.ant-radio) {
+        align-self: center !important;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.ant-checkbox-wrapper {
+    span:not(.ant-checkbox) {
+        align-self: center !important;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
 .ant-table-cell::before {
   visibility: hidden;
 }
