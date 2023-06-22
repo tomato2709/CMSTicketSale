@@ -44,7 +44,7 @@
     font-size: 14px;
     line-height: 22px;
 }
-.ticketControl .content .table .status.statusError {
+.ticketControl .content .table .status .statusError {
     color: #fd5959;
 }
 .ticketControl .filter {
