@@ -28,6 +28,9 @@ function App() {
             margin: 0,
             colorBgBase: '#F9F6F4',
           },
+          Popover: {
+            colorBgElevated: '#FFD2A8'
+          },
         },
       }}>
       <BrowserRouter>

@@ -1,0 +1,93 @@
+.ticketControl {
+    margin: 0 32px;
+    height: 95%;
+}
+.ticketControl .content {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+    height: 100%;
+}
+.ticketControl .content .title {
+    font-size: 34px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #1e0d03;
+    margin-bottom: 32px;
+}
+.ticketControl .content .input {
+    height: 48px;
+    width: 446px;
+    background-color: #f7f7f8;
+    border: none;
+    border-radius: 8px;
+}
+.ticketControl .content .input input {
+    background-color: #f7f7f8;
+}
+.ticketControl .content .btn {
+    height: 48px;
+}
+.ticketControl .content .table {
+    margin-top: 24px;
+}
+.ticketControl .content .table .link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #ff993c;
+}
+.ticketControl .content .table .status {
+    color: #a5a8b1;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+.ticketControl .content .table .status.statusError {
+    color: #fd5959;
+}
+.ticketControl .filter {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+    height: 100%;
+}
+.ticketControl .filter .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1e0d03;
+    margin-bottom: 32px;
+}
+.ticketControl .filter .label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #1e0d03;
+}
+.ticketControl .filter .text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.ticketControl .filter .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+}
+.ticketControl .filter .buttonContainer .btn {
+    width: 160px;
+    height: 48px;
+}
+.datePickerInput {
+    position: relative;
+    border: none;
+    background-color: #f7f8fb;
+    opacity: 0.99;
+    z-index: 50 !important;
+}
+.datePickerInputFirst {
+    z-index: 60 !important;
+}
