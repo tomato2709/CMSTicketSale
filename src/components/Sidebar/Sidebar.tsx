@@ -51,7 +51,7 @@ const Sidebar : React.FC = () => {
             <ContainerOutlined />
         ),
         getItem(
-            "settings",
+            "/settings",
             "Cài đặt",
             <SettingOutlined />,
             <MoreOutlined className="expand-icon" />,

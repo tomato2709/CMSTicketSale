@@ -35,3 +35,55 @@
     position: absolute;
     z-index: 10;
 }
+
+.modalPackage {
+    color: #1e0d03;
+}
+.modalPackage .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.modalPackage .note {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 16.5px;
+}
+.modalPackage .require {
+    color: #fd5959;
+    margin-right: 8px;
+}
+.modalPackage .label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+}
+.modalPackage .text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.modalPackage .checkItem {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.modalPackage .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+}
+.modalPackage .buttonContainer .btn {
+    height: 48px;
+    width: 160px;
+}
+.modalPackage .buttonContainer .btn + .btn {
+    margin-left: 24px;
+}
+

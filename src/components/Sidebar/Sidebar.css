@@ -54,9 +54,12 @@
 }
   
 .sidebar .menu .ant-menu-submenu-selected {
-    background-color: #ffb800 !important;
-    color: #ffffff !important;
+    background-color: #FFB800 !important;
     border-radius: 8px !important;
+}
+
+.sidebar .menu .ant-menu-submenu-selected .ant-menu-submenu-title {
+    color: #ffffff !important;
 }
   
 .sidebar .menu .ant-menu-submenu-selected .ant-menu-item-selected {
@@ -66,6 +69,15 @@
 .sidebar .menu .ant-menu-submenu-selected .ant-menu-item-selected a {
     font-weight: bold !important;
     color: #1e0d03 !important;
+}
+
+.sidebar .menu .ant-menu-submenu-selected .ant-menu-item {
+    background-color: transparent !important;
+    font-weight: 700;
+}
+
+.sidebar .menu .ant-menu-submenu-selected .ant-menu-inline {
+    background-color: #f9f6f4;
 }
   
 .sidebar .menu .ant-menu-submenu-expand-icon,
