@@ -203,7 +203,7 @@ const ModalPackage = ({ showModal, setShowModal, data }: IModal) => {
                         <Form.Item
                             name="timeStart"
                             labelCol={{ span: 24 }}
-                            label={<Typography.Text className="label">Ngày áp dụng</Typography.Text>}
+                            label={<Typography.Text className="label">⠀</Typography.Text>}
                         >
                             <TimePicker
                                 size="large"
@@ -224,7 +224,7 @@ const ModalPackage = ({ showModal, setShowModal, data }: IModal) => {
                         <Form.Item
                             name="timeEnd"
                             labelCol={{ span: 24 }}
-                            label={<Typography.Text className="label">Ngày áp dụng</Typography.Text>}
+                            label={<Typography.Text className="label">⠀</Typography.Text>}
                         >
                             <TimePicker
                                 size="large"
