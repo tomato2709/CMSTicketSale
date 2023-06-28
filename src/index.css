@@ -28,6 +28,14 @@ body > iframe {
   display: none;
 }
 
+input {
+  font-family: 'Montserrat Thin'
+}
+
+label::after {
+  display: none;
+}
+
 .ant-modal-header {
   border-bottom: none;
 }
@@ -70,8 +78,20 @@ body > iframe {
     }
 }
 
+.ant-table-thead tr .ant-table-cell {
+  background-color: #F1F4F8;
+}
+
+.ant-table-tbody tr:nth-child(even) {
+  background-color: #f7f8fb;
+}
+
 .ant-table-cell::before {
   visibility: hidden;
+}
+
+.ant-table-tbody tr td{
+  border-bottom: none;
 }
 
 ::-webkit-scrollbar {
@@ -88,6 +108,10 @@ body > iframe {
 ::-webkit-scrollbar-thumb {
   background: var(--yellow); 
   border-radius: 5px;
+}
+
+.btn {
+  font-weight: 700;
 }
 
 code {

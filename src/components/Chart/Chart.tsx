@@ -36,10 +36,10 @@ const CustomChart: React.FC<CustomChartType> = (props) => {
                     return w.config.series[seriesIndex];
                 },
                 textAnchor: "end",
-                style: {fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: "14px"},
+                style: {fontFamily: "Montserrat Thin", fontWeight: 400, fontSize: "14px"},
                 background: {
                     enabled: true,
-                    foreColor: "#fff",
+                    foreColor: "#1E0D03",
                     padding: 20,
                     opacity: 1,
                     border: 20,

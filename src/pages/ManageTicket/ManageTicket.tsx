@@ -5,11 +5,14 @@ import ModalFilter from "../../components/Modal/ModalFilter";
 import ModalModify from "../../components/Modal/ModalModify";
 import StatusTag from "../../components/StatusTag/StatusTag";
 import { Button, Col, Input, Popover, Row, Space, Table, Typography } from "antd";
-import Icon, { FilterOutlined, MoreOutlined } from "@ant-design/icons";
+import Icon, { MoreOutlined } from "@ant-design/icons";
+import { FiFilter } from "react-icons/fi";
 import moment, { Moment } from "moment";
 import { useAppSelector, useAppDispatch } from "../../redux/store";
 import { ticketSelector, getAll, ticketType } from "../../redux/slice/ticketSlice";
 import { useSearch } from "../../hooks/useSearch";
+
+const { Search } = Input;
 
 const columns = [
     {
@@ -73,7 +76,7 @@ const ManageTicket = () => {
     const [ data, setData ] = useState<ticketType | null>(null);
     const ticketStore = useAppSelector(state => state.ticketReducer.tickets)
     const [ ticket, setTicket ] = useState(ticketStore)
-    const [ search, setSearch ] = useSearch(ticketStore, 'number')
+    const [ search, setSearch ] = useSearch(ticketStore, 'bookingCode')
 
     useEffect(() => {
         setTicket(search)
@@ -112,7 +115,6 @@ const ManageTicket = () => {
                             }
                             className="input"
                             placeholder={"Tìm bằng số vé"}
-                            onChange={handleSearch}
                         />
                     </Typography.Text>
                 </Col>
@@ -121,7 +123,7 @@ const ManageTicket = () => {
                         <Button
                             ghost
                             className="btn"
-                            icon={<FilterOutlined />}
+                            icon={<FiFilter />}
                             onClick={() => setShowModalFilter(true)}
                         >
                             Lọc vé

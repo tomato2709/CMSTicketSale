@@ -16,6 +16,7 @@ type CustomDatePickerType = {
     type?: string;
     hasOption?: boolean;
     inputClassName?: string;
+    format?: string;
 };
 
 const CustomDatePicker: React.FC<CustomDatePickerType> = (props) => {
@@ -96,12 +97,11 @@ const CustomDatePicker: React.FC<CustomDatePickerType> = (props) => {
                 value={value ? moment({ ...value, month: value.month - 1 }) : undefined}
                 panelRender={() => undefined}
                 size="large"
-                format="DD/MM/YYYY"
+                format={props.format}
                 placeholder="dd/mm/yy"
                 onChange={onChange}
                 className={props.inputClassName}
-                suffixIcon={<CalendarOutlined style={{ color: "#FF993C", fontSize: "20px" }} />
-                }
+                suffixIcon={<CalendarOutlined style={{ color: "#FF993C", fontSize: "20px" }} />}
             />
         </Popover>
     );

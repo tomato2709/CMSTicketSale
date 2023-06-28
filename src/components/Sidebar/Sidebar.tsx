@@ -1,6 +1,9 @@
 import React from "react";
 import './Sidebar.css'
-import { HomeOutlined, ContainerOutlined, CreditCardOutlined, SettingOutlined, MoreOutlined } from "@ant-design/icons";
+import { SettingOutlined, MoreOutlined } from "@ant-design/icons";
+import { BiHomeAlt } from 'react-icons/bi';
+import { PiTicketBold } from 'react-icons/pi';
+import { BiReceipt } from 'react-icons/bi';
 import { Menu, MenuProps } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.png";
@@ -38,17 +41,17 @@ const Sidebar : React.FC = () => {
         getItem(
             "/home",
             <Link to="/home">Trang chủ</Link>,
-            <HomeOutlined />
+            <BiHomeAlt />
         ),
         getItem(
             "/manage-ticket",
             <Link to="/manage-ticket">Quản lý vé</Link>,
-            <CreditCardOutlined />
+            <PiTicketBold />
         ),
         getItem(
             "/ticket-control",
             <Link to="/ticket-control">Đối soát vé</Link>,
-            <ContainerOutlined />
+            <BiReceipt />
         ),
         getItem(
             "/settings",

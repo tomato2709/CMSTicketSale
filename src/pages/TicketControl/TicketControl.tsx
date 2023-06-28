@@ -77,7 +77,7 @@ const TicketControl = () => {
     return (
         <div className="ticketControl">
             <Row gutter={24} style={{ height: "100%" }}>
-                <Col span={17}>
+                <Col span={16}>
                     <div className="content">
                         <Typography.Title className="title">Đối soát vé</Typography.Title>
                         <Row justify="space-between">
@@ -127,11 +127,12 @@ const TicketControl = () => {
                         />
                     </div>
                 </Col>
-                <Col span={7}>
+                <Col span={8}>
                     <Form
                         className="filter"
-                        layout="vertical"
-                        labelCol={{ span: 12 }}
+                        layout="horizontal"
+                        labelCol={{ span: 14 }}
+                        labelAlign="left"
                         wrapperCol={{ span: 12 }}
                         onFinish={onFinish}
                     >
@@ -159,7 +160,8 @@ const TicketControl = () => {
                                 type="from"
                                 dayRange={dayRange}
                                 setDayRange={setDayRange}
-                                inputClassName={`$datePickerInput $datePickerInputFirst`}
+                                inputClassName="datePickerInput"
+                                format="DD/MM/YYYY"
                             />
                         </Form.Item>
                         <Form.Item
@@ -170,7 +172,8 @@ const TicketControl = () => {
                                 type="to"
                                 dayRange={dayRange}
                                 setDayRange={setDayRange}
-                                inputClassName="datePickerInput"
+                                inputClassName={`$datePickerInput $datePickerInputFirst`}
+                                format="DD/MM/YYYY"
                             />
                         </Form.Item>
                         <div className="buttonContainer">

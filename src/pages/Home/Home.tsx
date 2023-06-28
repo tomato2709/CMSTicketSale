@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import './Home.css'
 import CustomChart from "../../components/Chart/Chart";
+import CustomDatePicker from "../../components/DatePicker/DatePicker";
 import { Col, DatePicker, Row, Space, Typography } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 import Chart from "react-apexcharts";
+import { DayRange } from "@hassanmojab/react-modern-calendar-datepicker";
 
 const Home : React.FC = () => {
+    const [dayRange, setDayRange] = useState<DayRange>({
+        from: null,
+        to: null,
+    });
     const options: ApexCharts.ApexOptions = {
         chart: {
             width: 100,
@@ -58,15 +64,12 @@ const Home : React.FC = () => {
                 </Col>
                 <Col>
                     {" "}
-                    <DatePicker
-                        picker="date"
-                        placeholder="Chọn ngày"
-                        size="large"
-                        className="datePicker"
-                        format={"[Tháng] M, YYYY"}
-                        suffixIcon={
-                            <CalendarOutlined style={{ color: "#FF993C", fontSize: "20px" }} />
-                        }
+                    <CustomDatePicker
+                        type="from"
+                        dayRange={dayRange}
+                        setDayRange={setDayRange}
+                        inputClassName={`$datePickerInput $datePickerInputFirst`}
+                        format="[Tháng] M, YYYY"
                     />
                 </Col>
             </Row>
@@ -79,8 +82,8 @@ const Home : React.FC = () => {
                     {
                         name: "Doanh Thu",
                         data: [
-                            140000000, 260000000, 200000000, 150000000,
-                            210000000, 180000000, 150000000,
+                            140000000, 180000000, 200000000, 230000000,
+                            190000000, 260000000, 170000000,
                         ],
                     },
                 ]}
@@ -117,7 +120,7 @@ const Home : React.FC = () => {
                     </Col>
                     <Col span="6">
                         <Typography.Text className="secondary-text">
-                            Gói Sự kiện
+                            Gói sự kiện
                         </Typography.Text>
                     </Col>
                     <Col span="6"></Col>
@@ -127,13 +130,13 @@ const Home : React.FC = () => {
                         <CustomChart
                             data={[
                                 {
-                                    name: "Vé đã sử dụng",
-                                    value: 56024,
+                                    name: "Vé chưa sử dụng",
+                                    value: 13568,
                                     fill: "#4F75FF",
                                 },
                                 {
-                                    name: "Vé chưa sử dụng",
-                                    value: 13568,
+                                    name: "Vé đã sử dụng",
+                                    value: 56024,
                                     fill: "#FF8A48",
                                 },
                             ]}
@@ -142,8 +145,8 @@ const Home : React.FC = () => {
                     <Col span="6">
                         <CustomChart
                             data={[
-                                { name: "Vé đã sử dụng", value: 30256 },
-                                { name: "Vé chưa sử dụng", value: 28302 },
+                                { name: "Vé chưa sử dụng", value: 28302, fill: "#4F75FF" },
+                                { name: "Vé đã sử dụng", value: 30256, fill: "#FF8A48" },
                             ]}
                             legend={false}
                         />
@@ -152,7 +155,7 @@ const Home : React.FC = () => {
                         <Space direction="vertical">
                             <Space className="note-container" size={8}>
                                 <span
-                                    className="note-container"
+                                    className="color"
                                     style={{ backgroundColor: "#4F75FF" }}
                                 ></span>
                                 <span className="text">
@@ -161,7 +164,7 @@ const Home : React.FC = () => {
                             </Space>
                             <Space className="note-container" size={8}>
                                 <span
-                                    className="note-container"
+                                    className="color"
                                     style={{ backgroundColor: "#FF8A48" }}
                                 ></span>
                                 <span className="text">
