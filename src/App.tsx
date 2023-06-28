@@ -18,7 +18,7 @@ function App() {
         },
         components: {
           Button: {
-            colorBgContainer: '#ff993c'
+            colorBgContainer: '#ff993c',
           },
           Menu: {
             itemColor: '#1E0D03',
@@ -30,6 +30,16 @@ function App() {
           },
           Popover: {
             colorBgElevated: '#FFD2A8'
+          },
+          Radio: {
+            colorPrimary: '#27AEF9'
+          },
+          Checkbox: {
+            colorPrimary: '#27AEF9',
+            colorPrimaryHover: '#4096ff'
+          },
+          DatePicker: {
+            fontFamily: 'Montserrat Thin'
           },
         },
       }}>

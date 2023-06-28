@@ -3,7 +3,8 @@ import './Header.css'
 import { ReactComponent as searchIcon } from "../../assets/search.svg";
 import AvatarIcon from "../../assets/avatar.png"
 import { Avatar, Input } from "antd";
-import { BellOutlined, MailOutlined } from "@ant-design/icons";
+import { MailOutlined } from "@ant-design/icons";
+import { LuBell } from 'react-icons/lu';
 import Icon from "@ant-design/icons";
 
 const Menu : React.FC = () => {
@@ -20,7 +21,7 @@ const Menu : React.FC = () => {
             />
             <div className="profile-area">
                 <MailOutlined className="notification-icon" />
-                <BellOutlined className="notification-icon" />
+                <LuBell className="notification-icon" />
                 <Avatar src={AvatarIcon} className="avatar" />
             </div>
         </div>

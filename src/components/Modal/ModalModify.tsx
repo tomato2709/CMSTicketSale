@@ -71,8 +71,9 @@ const ModalModify = ({ showModal, setShowModal, data }: IModal) => {
         >
             <Form
                 name="filter"
-                layout="vertical"
+                layout="horizontal"
                 labelCol={{span: 8}}
+                labelAlign="left"
                 wrapperCol={{span: 16}}
                 onFinish={onFinish}
             >
@@ -106,6 +107,7 @@ const ModalModify = ({ showModal, setShowModal, data }: IModal) => {
                                 dayRange={dayRange}
                                 setDayRange={setDayRange}
                                 inputClassName={`$datePickerInput $datePickerInputFirst`}
+                                format="DD/MM/YYYY"
                             />
                         </Form.Item>
                     </Col>

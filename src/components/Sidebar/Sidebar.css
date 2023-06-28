@@ -47,6 +47,7 @@
 }
 .sidebar .menu .ant-menu-item-selected a {
     color: #ffffff !important;
+    font-weight: 700;
 }
   
 .sidebar .menu .ant-menu-item-selected::after {
@@ -60,6 +61,7 @@
 
 .sidebar .menu .ant-menu-submenu-selected .ant-menu-submenu-title {
     color: #ffffff !important;
+    font-weight: 700;
 }
   
 .sidebar .menu .ant-menu-submenu-selected .ant-menu-item-selected {

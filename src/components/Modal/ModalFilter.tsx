@@ -100,6 +100,7 @@ const ModalFilter = ({ showModal, setShowModal }: IModal) => {
                                 dayRange={dayRange}
                                 setDayRange={setDayRange}
                                 inputClassName={`$datePickerInput $datePickerInputFirst`}
+                                format="DD/MM/YYYY"
                             />
                         </Form.Item>
                     </Col>
@@ -118,6 +119,7 @@ const ModalFilter = ({ showModal, setShowModal }: IModal) => {
                                 dayRange={dayRange}
                                 setDayRange={setDayRange}
                                 inputClassName={`$datePickerInput $datePickerInputFirst`}
+                                format="DD/MM/YYYY"
                             />
                         </Form.Item>
                     </Col>

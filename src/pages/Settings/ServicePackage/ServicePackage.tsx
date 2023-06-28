@@ -66,10 +66,15 @@ const columns = [
 ];
 
 const ServicePackage = () => {
+    const [ title ] = useState("CMS Ticket Sale | Gói dịch vụ");
     const dispatch = useAppDispatch();
     const { loading, ticketPackages } = useAppSelector(ticketPackageSelector);
     const [ data, setData ] = useState<ticketPackageType | null>(null);
     const [ showModal, setShowModal ] = useState({show: false, edit: false});
+    
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
 
     useEffect(() => {
         dispatch(getAll());
