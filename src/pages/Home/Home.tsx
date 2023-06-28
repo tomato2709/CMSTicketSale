@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import './Home.css'
 import CustomChart from "../../components/Chart/Chart";
 import CustomDatePicker from "../../components/DatePicker/DatePicker";
@@ -8,6 +8,12 @@ import Chart from "react-apexcharts";
 import { DayRange } from "@hassanmojab/react-modern-calendar-datepicker";
 
 const Home : React.FC = () => {
+    const [ title ] = useState("CMS Ticket Sale | Trang chủ");
+
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
+
     const [dayRange, setDayRange] = useState<DayRange>({
         from: null,
         to: null,

@@ -50,9 +50,14 @@ interface formValue {
 }
 
 const TicketControl = () => {
+    const [ title ] = useState("CMS Ticket Sale | Đối soát vé");
     const dispatch = useAppDispatch();
     const { loading, tickets } = useAppSelector(ticketSelector);
     const [ dayRange, setDayRange ] = useState<DayRange>({from: null ,to: null});
+
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
 
     useEffect(() => {
         dispatch(getAll());

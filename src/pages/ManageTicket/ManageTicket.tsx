@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import './ManageTicket.css'
 import { ReactComponent as searchSvg } from "../../assets/search.svg";
 import ModalFilter from "../../components/Modal/ModalFilter";
@@ -69,6 +69,7 @@ interface IData {
 }
 
 const ManageTicket = () => {
+    const [ title ] = useState("CMS Ticket Sale | Quản lý vé");
     const dispatch = useAppDispatch();
     const { loading, tickets } = useAppSelector(ticketSelector);
     const [ showModalFilter, setShowModalFilter ] = useState<boolean>(false);
@@ -77,6 +78,10 @@ const ManageTicket = () => {
     const ticketStore = useAppSelector(state => state.ticketReducer.tickets)
     const [ ticket, setTicket ] = useState(ticketStore)
     const [ search, setSearch ] = useSearch(ticketStore, 'bookingCode')
+
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
 
     useEffect(() => {
         setTicket(search)
